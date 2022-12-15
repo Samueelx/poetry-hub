@@ -3,6 +3,7 @@ body {
     background: linear-gradient(180deg, #A1FCDF, #FCEFEF);
 }
 
+/**The header and about section*/
 header {
     display: flex;
     align-items: center;
@@ -19,8 +20,6 @@ header {
     width: 50vw;
     font-size: 1.5rem;
     font-family: 'Indie Flower', cursive;
-
-    /* border: 1px solid black; */
 }
 
 #about h3 {
@@ -31,3 +30,39 @@ header {
 #closer {
     padding-bottom: 2rem;
 }
+
+/**The poems Section*/
+.poems {
+    margin: 4rem;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.poem {
+    flex: 1;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 5px 15px -6px black;
+    transition: box-shadow 1s 0.1s;
+}
+.poem img {
+    padding-top: 1rem;
+    width: 7rem;
+}
+.poem p {
+    padding: 0 2rem;
+    font-size: 1.2rem;
+}
+.poem p.author {
+    font-weight: 900;
+}
+.poem:hover {
+    cursor: pointer;
+    box-shadow: 0px 9px 30px -2px black;
+    z-index: 5;
+}
+
