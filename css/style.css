@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    background: linear-gradient(180deg, #A1FCDF, #FCEFEF);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Artifika', serif;
+    height: 15vh;
+    text-align: center;
+    background-color: #7FD8BE;
+}
+
+#about {
+    margin: auto;
+    min-height: 25vh;
+    width: 50vw;
+    font-size: 1.5rem;
+    font-family: 'Indie Flower', cursive;
+
+    /* border: 1px solid black; */
+}
+
+#about h3 {
+    padding: 2rem;
+    padding-bottom: 1rem;
+}
+
+#closer {
+    padding-bottom: 2rem;
+}
