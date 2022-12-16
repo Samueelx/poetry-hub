@@ -14,7 +14,7 @@ The web application consumes data from the `poetryDB` API:
 - JavaScript
 
 ## To do
-- [x] Add the Login form.  
+- [ ] Add the Login form.  
 - [ ] Add functionality that allows user to read the selected poem.  
 - [ ] Add search Functionality.  
 
