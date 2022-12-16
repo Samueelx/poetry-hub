@@ -27,6 +27,7 @@ header {
 /**The navigation bar*/
 .nav ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 .nav {
