@@ -17,6 +17,7 @@ const renderCard = (poem) => {
 
     /**Add text */
     img.src = `./public/undraw_male_profile.svg`;
+    img.alt = "A profile picture";
     author.textContent = poem.author;
     title.textContent = poem.title;
 
