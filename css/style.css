@@ -3,7 +3,7 @@ body {
     background: linear-gradient(180deg, #A1FCDF, #FCEFEF);
 }
 
-/**The header and about section*/
+/**The header*/
 header {
     position: fixed;
     width: 100%;
@@ -13,13 +13,43 @@ header {
     z-index: 9999;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     box-shadow: 0px 4px 5px -5px black;
     font-family: 'Artifika', serif;
     height: 15vh;
     text-align: center;
     background-color: #7FD8BE;
 }
+#header {
+    padding-left: 1.5rem;
+}
+
+/**The navigation bar*/
+.nav ul {
+    display: flex;
+    gap: 2rem;
+}
+.nav {
+    padding-right: 3rem;
+}
+.nav li {
+    flex: 1;
+    list-style: none;
+
+}
+.nav a {
+    text-decoration: none;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    transition: all 0.5s ease-out;
+    color: rgb(26, 21, 21);  
+}
+.nav a:hover {
+    color: #FCEFEF;
+    background: black;
+}
+
+/**The about secion*/
 main {
     margin-top: 7rem;
 }
@@ -29,7 +59,7 @@ main {
     min-height: 25vh;
     width: 50vw;
     font-size: 1.5rem;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Cormorant Upright', serif;
 }
 
 #about h3 {
@@ -44,7 +74,7 @@ main {
 /**The poems Section*/
 .poems {
     margin: 4rem;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Cormorant Upright', serif;
     font-size: 1rem;
 
     display: flex;
@@ -54,6 +84,7 @@ main {
 }
 .poem {
     flex: 1;
+    align-self: stretch;
     margin: 1rem;
     min-width: 20vw;
     border-radius: 0.5rem;
@@ -71,9 +102,11 @@ main {
 .poem p.author {
     font-weight: 900;
 }
+.poem p.title {
+    font-weight: 400;
+}
 .poem:hover {
     cursor: pointer;
     box-shadow: 0px 9px 30px -2px black;
     z-index: 5;
 }
-

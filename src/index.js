@@ -40,5 +40,5 @@ const fetchRandom = (endpoint) => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetchRandom(`${ENDPOINT}/12`);
+    fetchRandom(`${ENDPOINT}/15`);
 });
