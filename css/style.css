@@ -27,7 +27,7 @@ header {
 /**The navigation bar*/
 .nav ul {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 .nav {
     padding-right: 3rem;
@@ -39,14 +39,14 @@ header {
 }
 .nav a {
     text-decoration: none;
-    padding: 0.8rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 0.3rem;
     transition: all 0.5s ease-out;
     color: rgb(26, 21, 21);  
 }
 .nav a:hover {
     color: #FCEFEF;
-    background: black;
+    background: rgba(3, 24, 44, 0.5);
 }
 
 /**The about secion*/

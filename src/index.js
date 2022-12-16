@@ -16,7 +16,7 @@ const renderCard = (poem) => {
     title.classList.add('title');
 
     /**Add text */
-    img.src = `./public/undraw_male_profile.svg`;
+    img.src = `./resources/undraw_male_profile.svg`;
     img.alt = "A profile picture";
     author.textContent = poem.author;
     title.textContent = poem.title;
