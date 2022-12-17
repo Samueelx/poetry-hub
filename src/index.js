@@ -35,6 +35,7 @@ const renderCard = (poem) => {
 /**Render an individual poem's lines */
 const renderLines = (poem) => {
     const lineSection = document.querySelector('#lines');
+
     const linesDiv = document.createElement('div');
     const title = document.createElement('h4');
     const linesParagraph = document.createElement('p');
@@ -49,6 +50,7 @@ const renderLines = (poem) => {
     linesDiv.appendChild(title);
     linesDiv.appendChild(linesParagraph);
     lineSection.appendChild(linesDiv);
+
 }
 
 /**Fetch random poem */

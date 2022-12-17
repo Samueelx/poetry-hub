@@ -120,10 +120,28 @@ main {
 #lines {
     font-family: 'Cormorant Upright', serif;
     margin: auto;
-    font-size: 2rem;
+    font-size: 1.5rem;
     max-width: 70vw; 
 }
 
 .lines-div {
     padding: 2rem;
+}
+
+/**The buttons*/
+button {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #A1FCDF;
+    border: none;
+    border-radius: .3rem;
+    transition: all 0.5s ease-out;
+}
+button:hover {
+    cursor: pointer;
+    color: #FFFFFC;
+    background-color: rgba(3, 24, 44, 0.9);
+}
+.like {
+    display: none;
 }
