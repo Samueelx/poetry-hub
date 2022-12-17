@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     text-align: center;
     background: linear-gradient(180deg, #A1FCDF, #FCEFEF);
@@ -110,4 +114,16 @@ main {
     cursor: pointer;
     box-shadow: 0px 9px 30px -2px black;
     z-index: 5;
+}
+
+/**Lines section*/
+#lines {
+    font-family: 'Cormorant Upright', serif;
+    margin: auto;
+    font-size: 2rem;
+    max-width: 70vw; 
+}
+
+.lines-div {
+    padding: 2rem;
 }

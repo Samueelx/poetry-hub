@@ -26,6 +26,29 @@ const renderCard = (poem) => {
     card.appendChild(author);
     card.appendChild(title);
     poemsDiv.appendChild(card);
+
+    card.addEventListener("click", () => {
+        renderLines(poem);
+    })
+}
+
+/**Render an individual poem's lines */
+const renderLines = (poem) => {
+    const lineSection = document.querySelector('#lines');
+    const linesDiv = document.createElement('div');
+    const title = document.createElement('h4');
+    const linesParagraph = document.createElement('p');
+
+    linesDiv.classList.add('lines-div');
+    linesParagraph.classList.add('lines');
+
+    title.innerText = poem.title;
+    linesParagraph.innerText = poem.lines;
+
+    /**Append the elements */
+    linesDiv.appendChild(title);
+    linesDiv.appendChild(linesParagraph);
+    lineSection.appendChild(linesDiv);
 }
 
 /**Fetch random poem */
