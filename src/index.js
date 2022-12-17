@@ -28,8 +28,12 @@ const renderCard = (poem) => {
     poemsDiv.appendChild(card);
 
     card.addEventListener("click", () => {
+        const poemSection = document.querySelector('#lines');
+        if(poemSection.children !== null)
+        poemSection.innerHTML = "";
+
         renderLines(poem);
-    })
+    });
 }
 
 /**Render an individual poem's lines */
