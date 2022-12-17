@@ -51,6 +51,15 @@ const renderLines = (poem) => {
     linesDiv.appendChild(linesParagraph);
     lineSection.appendChild(linesDiv);
 
+    linesDiv.insertAdjacentHTML("beforeend", `
+        <button class="like">
+            <i class="fa fa-thumbs-up fa-lg" aria-hidden="true"> LIKE </i>
+        </button>
+        <button class="like">
+            <i class="fa fa-thumbs-down fa-lg" aria-hidden="true"> DISLIKE </i>
+        </button>
+    `);
+
 }
 
 /**Fetch random poem */
