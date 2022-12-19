@@ -76,6 +76,10 @@ main {
     padding-bottom: 2rem;
 }
 
+hr {
+    margin-bottom: 2rem;
+}
+
 /**The poems Section*/
 .poems {
     margin: 4rem;
@@ -141,4 +145,7 @@ button:hover {
     cursor: pointer;
     color: #FFFFFC;
     background-color: rgba(3, 24, 44, 0.9);
+}
+button.reset {
+    font-size: 1rem;
 }
