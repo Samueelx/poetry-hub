@@ -43,16 +43,24 @@ const renderLines = (poem) => {
     const linesDiv = document.createElement('div');
     const title = document.createElement('h4');
     const linesParagraph = document.createElement('p');
+    const poetParagraph = document.createElement('p');
 
     linesDiv.classList.add('lines-div');
     linesParagraph.classList.add('lines');
 
     title.innerText = poem.title;
     linesParagraph.innerText = poem.lines;
+    poetParagraph.innerText = `Author: ${poem.author}.`;
+
+    /**Create button to reset the lines section/div */
+    const reset = document.createElement('button');
+    reset.textContent = 'Reset';
+    reset.classList.add('reset');
 
     /**Append the elements */
     linesDiv.appendChild(title);
     linesDiv.appendChild(linesParagraph);
+    linesDiv.appendChild(poetParagraph);
     lineSection.appendChild(linesDiv);
 
     linesDiv.insertAdjacentHTML("beforeend", `
@@ -63,6 +71,14 @@ const renderLines = (poem) => {
             <i class="fa fa-thumbs-down fa-lg" aria-hidden="true"> DISLIKE </i>
         </button>
     `);
+
+    /**Insert the reset button */
+    linesDiv.insertAdjacentElement('afterbegin', reset);
+
+    /**Clear the lines */
+    reset.addEventListener('click', () => {
+        linesDiv.remove();
+    });
 
 }
 
@@ -75,8 +91,6 @@ const fetchRandom = (endpoint) => {
         })
     })
 }
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchRandom(`${ENDPOINT}/15`);
