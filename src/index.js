@@ -1,4 +1,5 @@
 const ENDPOINT = 'https://poetrydb.org/random';
+const TITLES_ENDPOINT = 'https://poetrydb.org/title';
 
 /**Display poem details in card*/
 const renderCard = (poem) => {
@@ -82,6 +83,15 @@ const renderLines = (poem) => {
 
 }
 
+/**Capture user input from search form */
+const searchInput = () => {
+    const searchForm = document.querySelector('#searchForm');
+    const inputElement = searchForm.querySelector('input');
+    const inputValue = inputElement.value;
+    // console.log(inputValue);
+    return inputValue;
+}
+
 /**Fetch random poem */
 const fetchRandom = (endpoint) => {
     fetch(endpoint).then(response => response.json())
@@ -92,6 +102,31 @@ const fetchRandom = (endpoint) => {
     })
 }
 
+/**Search for specific poem from API */
+const searchPoems = (event) => {
+    event.preventDefault();
+    const inputValue = searchInput();
+    fetch(`${TITLES_ENDPOINT}/${inputValue}`)
+    .then((response) => response.json())
+    .then((data) => {
+        /**Remove lines if present */
+        const linesDiv = document.querySelector('#lines');
+        if(linesDiv.children !== null)
+        linesDiv.replaceChildren();
+
+        /**Remove cards */
+        const poemsDiv = document.querySelector('.poems');
+        poemsDiv.replaceChildren();
+
+        /**Render results in cards */
+        data.forEach(poem => {
+            renderCard(poem);
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchRandom(`${ENDPOINT}/15`);
+    const searchForm = document.querySelector('#searchForm');
+    searchForm.addEventListener('submit', searchPoems);
 });
