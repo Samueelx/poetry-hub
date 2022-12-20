@@ -64,12 +64,14 @@ const renderLines = (poem) => {
     linesDiv.appendChild(poetParagraph);
     lineSection.appendChild(linesDiv);
 
+    /**Add like and dislike buttons */
+    let upvotes = 0, downvotes = 0;
     linesDiv.insertAdjacentHTML("beforeend", `
-        <button class="like">
-            <i class="fa fa-thumbs-up fa-lg" aria-hidden="true"> LIKE </i>
+        <button class="like" id="upvotes">
+            <i class="fa fa-thumbs-up fa-lg" aria-hidden="true"> UPVOTES: ${upvotes} </i>
         </button>
-        <button class="like">
-            <i class="fa fa-thumbs-down fa-lg" aria-hidden="true"> DISLIKE </i>
+        <button class="like" id="downvotes">
+            <i class="fa fa-thumbs-down fa-lg" aria-hidden="true"> DOWNVOTES: ${downvotes} </i>
         </button>
     `);
 
@@ -79,6 +81,19 @@ const renderLines = (poem) => {
     /**Clear the lines */
     reset.addEventListener('click', () => {
         linesDiv.remove();
+    });
+
+    /**Event handler to add on votes/downvotes buttons */
+    const upvoteButton = linesDiv.querySelector('#upvotes');
+    const downvoteButton = linesDiv.querySelector('#downvotes');
+    upvoteButton.addEventListener('click', () => {
+        ++upvotes;
+        upvoteButton.innerHTML = `<i class="fa fa-thumbs-up fa-lg" aria-hidden="true"> UPVOTES: ${upvotes} </i>`;
+    });
+
+    downvoteButton.addEventListener('click', () => {
+        ++downvotes;
+        downvoteButton.innerHTML = `<i class="fa fa-thumbs-down fa-lg" aria-hidden="true"> DOWNVOTES: ${downvotes} </i>`;
     });
 
 }
