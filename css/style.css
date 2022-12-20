@@ -149,3 +149,27 @@ button:hover {
 button.reset {
     font-size: 1rem;
 }
+/**The search bar*/
+.search-div {
+    font-family: 'Cormorant Upright', serif;;
+}
+.search-div label {
+    font-size: 1.5rem;
+}
+input[type=text] {
+    padding: 1rem;
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: .7rem;
+    font-size: 1rem;
+    transition: all 0.5s ease-in;
+}
+input[type=text]:focus {
+    background: rgba(3, 24, 44, 0.9);
+    color: white;
+}
+button[type=submit] {
+    font-size: 1rem;
+}
