@@ -15,8 +15,8 @@ The web application consumes data from the `poetryDB` API:
 
 ## To do
 - [ ] Add the Login form.  
-- [ ] Add functionality that allows user to read the selected poem.  
-- [ ] Add search Functionality.  
+- [x] Add functionality that allows user to read the selected poem.  
+- [x] Add search Functionality.  
 
 ## Getting Started
 To get started, you need to clone this repository using the command: 
