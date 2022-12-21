@@ -38,6 +38,9 @@ To run this web application on your browser:
 
 - Using the Live-Server extension, open the `index.html` file in your browser
 
+#### Login Form:
+Click on the `Login` link to view and/or use the login form. 
+
 ## Licence
  [MIT](https://github.com/Samueelx/poetry-hub/blob/master/LICENCE)
 
