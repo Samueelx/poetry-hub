@@ -157,7 +157,7 @@ button.reset {
     font-size: 1.5rem;
     font-weight: 600;
 }
-input[type=text] {
+input[type=text], input[type=password] {
     padding: 1rem;
     border: none;
     outline: none;
@@ -167,7 +167,7 @@ input[type=text] {
     font-size: 1rem;
     transition: all 0.5s ease-in;
 }
-input[type=text]:focus {
+input[type=text]:focus, input[type=password]:focus {
     background: rgba(3, 24, 44, 0.9);
     color: white;
 }
@@ -178,11 +178,12 @@ button[type=submit] {
 /**The login form*/
 /**Center the login form*/
 .login-form {
+    margin: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Cormorant Upright', serif;
-    margin-bottom: 2rem;
+    display: none;
 }
 .form {
     background-color: #7FD8BE;

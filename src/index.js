@@ -143,5 +143,22 @@ const searchPoems = (event) => {
 document.addEventListener('DOMContentLoaded', () => {
     fetchRandom(`${ENDPOINT}/15`);
     const searchForm = document.querySelector('#searchForm');
+    const loginLink = document.querySelector('#loginLink');
     searchForm.addEventListener('submit', searchPoems);
+
+    /**event listener to display login form*/
+    loginLink.addEventListener('click', () => {
+        const mainSection = document.querySelector('#main');
+        const loginDiv = document.querySelector('.login-form');
+        mainSection.style.display = 'none';
+        loginDiv.style.setProperty('display', 'flex');
+
+        /**display the main after login details are submitted */
+        const loginForm = loginDiv.querySelector('.form');
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault()
+            mainSection.style.setProperty('display', 'initial');
+            loginDiv.style.display = 'none';
+        });
+    });
 });
